@@ -6,14 +6,8 @@ Created on Wed Oct 19 13:37:47 2022
 @author: konrad
 """
 import random
-from turtle import title
-from typing_extensions import dataclass_transform
-from matplotlib import pyplot as plt
 import streamlit as st
 import pandas as pd
-import numpy as np
-import altair as alt
-import time
 
 st.title('Werf mal!')
 
