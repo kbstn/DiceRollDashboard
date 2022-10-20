@@ -9,7 +9,9 @@ Its useless as they still refuse to belive that coinflips have a 'fair' 50/50 ch
 pip install streamlit
 ```
 ## navigate to dice.py folder
-
+```
+cd /pathtofile/
+```
 
 ## run app on localhost
 ```
