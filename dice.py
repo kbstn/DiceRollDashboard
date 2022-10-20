@@ -9,18 +9,28 @@ import random
 import streamlit as st
 import pandas as pd
 
+# add a title to the page
 st.title('Werf mal!')
 
-wuerfe = st.number_input('Anzahl der Wuerfe, immer wenn du die Zahl änderst wird neu gewürfelt! (nicht mehr als 100000 sonst ist das zuviel',value=20000)
+# create a input field which stores the given number in a variable
+wuerfe = st.number_input('Anzahl der Wuerfe, immer wenn du die Zahl änderst wird neu gewürfelt! (nicht mehr als 100000 sonst ist das zuviel',value=500)
+
+# limit the app to 100k runs. otherwise it will crash my laptop
 if wuerfe > 100000:
     wuerfe = 100000
     
+# let the user select what to roll    
 seiten = st.selectbox(
     'Wieviel Seiten hat dein "Würfel" 2 = Münze; 6= normaler Würfel; 20 = D20?',
     (2, 6, 20),index=1)
 
+# cach the following function to avoid recalculation everytime we query the resulting dataframe
 @st.cache(show_spinner=False)
+
 def muenze(wuerfe,seiten):
+    """
+    
+    """
     
     ergebnis= [0 for wurf in range(seiten)]
     label = [wurf+1 for wurf in range(seiten)]
