@@ -15,7 +15,7 @@ st.set_page_config(layout="wide")
 st.title('Werf mal!')
 
 # create a input field which stores the given number in a variable
-wuerfe = st.number_input('Anzahl der Wuerfe, immer wenn du die Zahl änderst wird neu gewürfelt! (nicht mehr als 100000 sonst ist das zuviel',value=500)
+wuerfe = st.number_input('Anzahl der Wuerfe, immer wenn du die Zahl änderst wird neu gewürfelt! (nicht mehr als 100000 sonst ist das zuviel)',value=500)
 
 # limit the app to 100k runs. otherwise it will crash my laptop
 if wuerfe > 100000:
