@@ -11,7 +11,10 @@ import pandas as pd
 
 st.title('Werf mal!')
 
-wuerfe = st.number_input('Anzahl der Wuerfe, immer wenn du die Zahl änderst wird neu gewürfelt!',value=20000)
+wuerfe = st.number_input('Anzahl der Wuerfe, immer wenn du die Zahl änderst wird neu gewürfelt! (nicht mehr als 500000 sonst ist das zuviel',value=20000)
+if wuerfe > 500000:
+    wuerfe = 500000
+    
 seiten = st.selectbox(
     'Wieviel Seiten hat dein "Würfel" 2 = Münze; 6= normaler Würfel; 20 = D20?',
     (2, 6, 20),index=1)
