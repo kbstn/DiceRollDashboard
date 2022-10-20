@@ -9,6 +9,8 @@ import random
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(layout="wide")
+
 # add a title to the page
 st.title('Werf mal!')
 
@@ -29,7 +31,7 @@ seiten = st.selectbox(
 
 def muenze(wuerfe,seiten):
     """
-    
+
     """
     
     ergebnis= [0 for wurf in range(seiten)]
@@ -59,7 +61,7 @@ df =pd.DataFrame(ergebnis_track,columns=label)
 
 #
 
-slider = st.slider('Wieviele der '+str(wuerfe)+' möchtest du dir anschauen?',1,wuerfe,value=6)
+slider = st.slider('Wieviele der '+str(wuerfe)+' möchtest du dir anschauen?',1,wuerfe,value=12)
 
 df2 = df[:slider]
 # st.line_chart(df2)
