@@ -1,13 +1,12 @@
 # 🎲 Dice Roll Dashboard
 
-A fun and interactive Streamlit dashboard that visualizes probability distributions for dice rolls and coin flips. Perfect for teaching probability concepts or just having fun with random number generation.
+A interactive Streamlit dashboard that visualizes probability distributions for dice rolls and coin flips. Teaching probability concepts for kids or just have fun with random number generation.
 
 ## 🚀 Features
 
 - Simulate dice rolls (D2, D6, D20, or custom)
 - Visualize probability distributions
 - Interactive charts showing roll history
-- Responsive design that works on any device
 - Containerized with Docker for easy deployment
 
 ## 🛠️ Prerequisites
