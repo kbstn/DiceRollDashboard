@@ -16,8 +16,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application
 COPY . .
 
-# Expose the port defined in the environment variables
-ARG STREAMLIT_SERVER_PORT=8508
+# Expose the port that will be provided at runtime
+ENV STREAMLIT_SERVER_PORT=${STREAMLIT_SERVER_PORT}
 EXPOSE ${STREAMLIT_SERVER_PORT}
 
 # Command to run the application (using shell form for env var expansion)
