@@ -16,8 +16,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application
 COPY . .
 
-# Expose Streamlit's default port
-EXPOSE 8508
+# Expose the port defined in the environment variables
+ARG STREAMLIT_SERVER_PORT=8508
+EXPOSE ${STREAMLIT_SERVER_PORT}
 
-# Command to run the application
-CMD ["streamlit", "run", "app.py", "--server.port=8508", "--server.address=0.0.0.0"]
+# Command to run the application (using shell form for env var expansion)
+CMD streamlit run app.py --server.port=${STREAMLIT_SERVER_PORT} --server.address=0.0.0.0
