@@ -26,10 +26,9 @@ seiten = st.selectbox(
     'Wieviel Seiten hat dein "Würfel" 2 = Münze; 6= normaler Würfel; 20 = D20?',
     (2, 6, 20),index=1)
 
-# cach the following function to avoid recalculation everytime we query the resulting dataframe
-@st.cache(show_spinner=False)
-
-def muenze(wuerfe,seiten):
+# Cache the following function to avoid recalculation everytime we query the resulting dataframe
+@st.cache_data(show_spinner=False)
+def muenze(wuerfe, seiten):
     """
 
     """
